@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Serrano — Cocina Mediterránea Casera | La Vila Joiosa, Alicante</title>
+  <meta name="description" content="Restaurante de cocina mediterránea casera en La Vila Joiosa, Alicante. Menú del día 13,90€. Reservas al 965 895 117 o por WhatsApp. Martes a Sábado 10h–23:30h.">
+  <meta name="keywords" content="restaurante La Vila Joiosa, cocina mediterránea, menú del día, cocina venezolana, Villajoyosa, Alicante, restaurante casero">
+  <meta property="og:title" content="Los Serrano — Cocina Mediterránea Casera">
+  <meta property="og:description" content="Restaurante familiar en La Vila Joiosa. Menú del día, cocina casera y venezolana. ¡Reserva ya!">
+  <meta property="og:type" content="restaurant">
+  <meta name="theme-color" content="#C06026">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="preload" as="image" href="assets/img/dish-05.png" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css?v=20260609">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Ir al contenido principal</a>
+
+  <!-- ═══════════════════════════════ NAV ════════════════════════════════ -->
+  <header class="nav" id="nav" role="banner">
+    <a class="nav-brand" href="#inicio" aria-label="Los Serrano – Inicio">
+      <span class="nav-brand-name">Los Serrano</span>
+      <span class="nav-brand-sub" data-i18n="nav.brandSub">Cocina Mediterránea Casera</span>
+    </a>
+
+    <nav class="nav-links" role="navigation" aria-label="Navegación principal">
+      <a href="#nosotros" data-i18n="nav.story">Nuestra Historia</a>
+      <a href="#especialidades" data-i18n="nav.dishes">Especialidades</a>
+      <a href="#menu" data-i18n="nav.menu">Carta &amp; Menú</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="lang-switcher desktop-lang" role="group" aria-label="Seleccionar idioma">
+      <button class="lang-btn is-active" data-lang="es" aria-label="Español">ES</button>
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+      <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+      <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+    </div>
+
+    <a href="https://wa.me/34965895117?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20Los%20Serrano"
+       class="nav-reserve-btn" target="_blank" rel="noopener" data-i18n="nav.reserve">Reservar</a>
+
+    <button class="hamburger" id="hamburger"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
+  </header>
+
+  <!-- ══════════════════════════ MOBILE MENU ═════════════════════════════ -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <div class="mobile-menu-inner">
+      <nav class="mobile-nav" role="navigation" aria-label="Menú móvil">
+        <a class="mobile-nav-link" href="#nosotros" data-i18n="nav.story">Nuestra Historia</a>
+        <a class="mobile-nav-link" href="#especialidades" data-i18n="nav.dishes">Especialidades</a>
+        <a class="mobile-nav-link" href="#menu" data-i18n="nav.menu">Carta &amp; Menú</a>
+        <a class="mobile-nav-link" href="#contacto" data-i18n="nav.contact">Contacto</a>
+        <a class="mobile-nav-link mobile-reserve-link"
+           href="https://wa.me/34965895117?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20Los%20Serrano"
+           target="_blank" rel="noopener"
+           data-i18n="nav.reserve">Reservar Mesa</a>
+      </nav>
+
+      <div class="mobile-lang-section">
+        <p class="mobile-lang-label" data-i18n="nav.language">Idioma</p>
+        <div class="mobile-lang-grid">
+          <button class="mobile-lang-btn is-active" data-lang="es">ES &middot; Español</button>
+          <button class="mobile-lang-btn" data-lang="en">EN &middot; English</button>
+          <button class="mobile-lang-btn" data-lang="de">DE &middot; Deutsch</button>
+          <button class="mobile-lang-btn" data-lang="it">IT &middot; Italiano</button>
+          <button class="mobile-lang-btn" data-lang="fr">FR &middot; Français</button>
+        </div>
+      </div>
+
+      <div class="mobile-menu-contact">
+        <a href="tel:+34965895117" class="mobile-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.55 10.83a19.79 19.79 0 01-3-8.59A2 2 0 012.51 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.49a16 16 0 006.29 6.29l.86-.86a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          965 895 117
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ══════════════════════════════ HERO ════════════════════════════════ -->
+    <section class="hero" id="inicio" aria-label="Inicio">
+      <div class="hero-bg">
+        <img src="assets/img/dish-05.png"
+             alt="Merluza a la plancha con guarnición — Los Serrano, La Vila Joiosa"
+             fetchpriority="high"
+             loading="eager">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">La Vila Joiosa &middot; Alicante</p>
+        <h1 class="hero-title">Los Serrano</h1>
+        <p class="hero-tagline" data-i18n="hero.sub">Cocina Mediterránea Casera</p>
+
+        <div class="hero-info-bar">
+          <a href="tel:+34965895117" class="hero-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.55 10.83a19.79 19.79 0 01-3-8.59A2 2 0 012.51 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.49a16 16 0 006.29 6.29l.86-.86a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            965 895 117
+          </a>
+          <span class="hero-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            Av. de Benidorm, 34
+          </span>
+          <span class="hero-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+            <span data-i18n="hero.hours">Mar–Sáb 10:00–23:30 · Dom 10:00–23:00</span>
+          </span>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="https://wa.me/34965895117?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20Los%20Serrano"
+             class="btn btn-primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span data-i18n="hero.bookBtn">Reservar Mesa</span>
+          </a>
+          <a href="#menu" class="btn btn-ghost" data-i18n="hero.menuBtn">Ver la Carta</a>
+        </div>
+
+        <p class="hero-open-status">
+          <span class="open-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.open">Abierto hoy</span>
+        </p>
+      </div>
+
+      <a href="#nosotros" class="scroll-cue" aria-label="Desplazarse hacia abajo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════════ INFO BAR ═══════════════════════════════ -->
+    <div class="info-bar" role="complementary" aria-label="Información de contacto rápido">
+      <a href="tel:+34965895117" class="info-bar-item">
+        <div class="info-bar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.55 10.83a19.79 19.79 0 01-3-8.59A2 2 0 012.51 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.49a16 16 0 006.29 6.29l.86-.86a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div class="info-bar-text">
+          <span class="info-label" data-i18n="info.callUs">Llámanos</span>
+          <span class="info-value">965 895 117</span>
+        </div>
+      </a>
+
+      <a href="https://maps.google.com/maps?q=Los+Serrano+con+Calor+Latino,+Av.+de+Benidorm+34,+03570+La+Vila+Joiosa"
+         target="_blank" rel="noopener" class="info-bar-item">
+        <div class="info-bar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="info-bar-text">
+          <span class="info-label" data-i18n="info.address">Dirección</span>
+          <span class="info-value">Av. de Benidorm, 34</span>
+        </div>
+      </a>
+
+      <div class="info-bar-item">
+        <div class="info-bar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <div class="info-bar-text">
+          <span class="info-label" data-i18n="info.hours">Horario</span>
+          <span class="info-value" data-i18n="info.hoursValue">Mar–Sáb 10h–23:30h · Dom 10h–23h</span>
+        </div>
+      </div>
+
+      <a href="https://wa.me/34965895117?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20Los%20Serrano"
+         class="info-bar-item info-bar-wa" target="_blank" rel="noopener">
+        <div class="info-bar-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </div>
+        <div class="info-bar-text">
+          <span class="info-label">WhatsApp</span>
+          <span class="info-value" data-i18n="info.waValue">Reservas y consultas</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- ══════════════════════════════ ABOUT ═══════════════════════════════ -->
+    <section class="about" id="nosotros" aria-label="Nuestra historia">
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">Nuestra Historia</p>
+          <h2 class="section-title">
+            <span data-i18n="about.title1">Sabores de casa,</span><br>
+            <em data-i18n="about.title2">en el corazón del Mediterráneo.</em>
+          </h2>
+          <p data-i18n="about.p1">En Los Serrano cocinamos como en casa: con producto fresco del mercado, recetas de siempre y el sabor que solo da el cariño. Sin pretensiones, sin artificios. Solo buena comida.</p>
+          <p data-i18n="about.p2">Aquí encontrarás el arroz que te reconforta, el pescado del día y el postre que no puedes rechazar. Todo hecho con las manos y el corazón.</p>
+
+          <div class="about-features">
+            <span class="about-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              <span data-i18n="about.feat1">Terraza exterior</span>
+            </span>
+            <span class="about-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span data-i18n="about.feat2">Dos salones</span>
+            </span>
+          </div>
+
+          <a href="https://wa.me/34965895117?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20Los%20Serrano"
+             class="btn btn-primary" target="_blank" rel="noopener" data-i18n="about.cta">Hacer una reserva</a>
+        </div>
+        <div class="about-image reveal reveal-right">
+          <img src="assets/img/restaurant.png" alt="Los Serrano — Restaurante en La Vila Joiosa" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SPECIALTIES ════════════════════════════ -->
+    <section class="specialties" id="especialidades" aria-label="Especialidades">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow" data-i18n="spec.eyebrow">Nuestra Cocina</p>
+          <h2 class="section-title" data-i18n="spec.title">Especialidades de la casa</h2>
+          <p class="section-sub" data-i18n="spec.sub">Producto fresco, recetas de siempre.</p>
+        </div>
+
+        <div class="dishes-grid">
+          <article class="dish-card reveal" style="--d:0s">
+            <div class="dish-img-wrap">
+              <img src="assets/img/dish-07.png" alt="Patatas bravas" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-info">
+              <h3 data-i18n="dish.bravas">Patatas Bravas</h3>
+              <p data-i18n="dish.bravas.desc">Crujientes, con nuestra salsa de la casa.</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" style="--d:0.1s">
+            <div class="dish-img-wrap">
+              <img src="assets/img/dish-03.png" alt="Arroz con gambas" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-info">
+              <h3 data-i18n="dish.arroz">Arroz con Gambas</h3>
+              <p data-i18n="dish.arroz.desc">Arroz mediterráneo, en su punto.</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" style="--d:0.2s">
+            <div class="dish-img-wrap">
+              <img src="assets/img/dish-05.png" alt="Merluza a la plancha" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-info">
+              <h3 data-i18n="dish.merluza">Merluza a la Plancha</h3>
+              <p data-i18n="dish.merluza.desc">Pescado fresco con guarnición.</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" style="--d:0.3s">
+            <div class="dish-img-wrap">
+              <img src="assets/img/dish-04.png" alt="Escalope con champiñones" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-info">
+              <h3 data-i18n="dish.escalope">Escalope con Champiñones</h3>
+              <p data-i18n="dish.escalope.desc">Crujiente, con salsa de champiñones y patatas.</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" style="--d:0.4s">
+            <div class="dish-img-wrap">
+              <img src="assets/img/dish-01.png" alt="Postre de melocotón con nata" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-info">
+              <h3 data-i18n="dish.postre1">Melocotón con Nata</h3>
+              <p data-i18n="dish.postre1.desc">Nuestro postre casero más querido.</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" style="--d:0.5s">
+            <div class="dish-img-wrap">
+              <img src="assets/img/dish-06.png" alt="Profiteroles con chocolate" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-info">
+              <h3 data-i18n="dish.profiteroles">Profiteroles con Chocolate</h3>
+              <p data-i18n="dish.profiteroles.desc">El final perfecto de cualquier comida.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ MENÚ DEL DÍA ══════════════════════════ -->
+    <section class="menu-dia" id="menu" aria-label="Menú del día">
+      <div class="container menu-dia-inner">
+        <div class="menu-dia-content reveal">
+          <p class="eyebrow eyebrow-light" data-i18n="menudia.eyebrow">Cada día de la semana</p>
+          <h2 class="section-title" data-i18n="menudia.title">Menú del Día</h2>
+
+          <div class="menu-dia-price-block">
+            <p class="menu-dia-schedule" data-i18n="menudia.schedule">Todos los días · 13:30 – 16:00</p>
+            <div class="menu-dia-prices">
+              <div class="menu-dia-price-row">
+                <span class="menu-dia-day-label" data-i18n="menudia.weekdayLabel">Lun – Vie</span>
+                <span class="menu-dia-price">13,90 €</span>
+              </div>
+              <div class="menu-dia-price-row">
+                <span class="menu-dia-day-label" data-i18n="menudia.weekendLabel">Sáb – Dom</span>
+                <span class="menu-dia-price">14,90 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-dia-cols">
+            <div class="menu-dia-col">
+              <h3 data-i18n="menudia.starters">Entrantes a elegir</h3>
+              <ul>
+                <li data-i18n="menudia.s1">Ensalada Mixta</li>
+                <li data-i18n="menudia.s2">Crema de Calabacín</li>
+                <li data-i18n="menudia.s3">Ensalada de Verduras</li>
+              </ul>
+            </div>
+            <div class="menu-dia-col">
+              <h3 data-i18n="menudia.mains">Plato Principal a elegir</h3>
+              <ul>
+                <li data-i18n="menudia.m1">Pechuga a la Plancha o Escalope</li>
+                <li data-i18n="menudia.m2">Merluza a la Plancha</li>
+                <li data-i18n="menudia.m3">Carrillada de Cerdo</li>
+                <li data-i18n="menudia.m4">Estofado de Ternera en Salsa</li>
+                <li data-i18n="menudia.m5">Salmón a la Plancha</li>
+                <li data-i18n="menudia.m6">Pasta al Pesto a la Marinera</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu-dia-includes">
+            <span data-i18n="menudia.inc1">Pan con Alioli</span>
+            <span class="inc-dot" aria-hidden="true">&middot;</span>
+            <span data-i18n="menudia.inc2">Bebida incluida</span>
+            <span class="inc-dot" aria-hidden="true">&middot;</span>
+            <span data-i18n="menudia.inc3">Postre o Café</span>
+          </div>
+
+        </div>
+
+        <div class="menu-dia-images reveal reveal-right">
+          <div class="menu-dia-img-item">
+            <img src="assets/img/pollo.png" alt="Pollo a la plancha — Menú del día Los Serrano" loading="lazy" decoding="async">
+            <span class="menu-dia-img-label" data-i18n="menudia.imgLabel1">Pollo a la Plancha</span>
+          </div>
+          <div class="menu-dia-img-item">
+            <img src="assets/img/salmon.png" alt="Salmón a la plancha — Menú del día Los Serrano" loading="lazy" decoding="async">
+            <span class="menu-dia-img-label" data-i18n="menudia.imgLabel2">Salmón a la Plancha</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ LA CARTA ════════════════════════════════ -->
+    <section class="la-carta" id="carta" aria-label="La carta">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow" data-i18n="carta.eyebrow">Nuestra carta</p>
+          <h2 class="section-title" data-i18n="carta.title">Carta</h2>
+        </div>
+
+        <div class="carta-accordion reveal">
+
+          <div class="carta-acc-item is-open">
+            <button class="carta-acc-trigger" aria-expanded="true">
+              <span class="acc-label" data-i18n="carta.cat1">Para ir abriendo boca</span>
+              <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="carta-acc-panel">
+              <ul class="carta-items-list">
+                <li class="carta-item"><span class="ci-name">Tequeños (3 uds.)</span><span class="ci-price">5,50 €</span></li>
+                <li class="carta-item"><span class="ci-name">Tostones con guacamole</span><span class="ci-price">5,90 €</span></li>
+                <li class="carta-item"><span class="ci-name">Empanadas (2 uds.)</span><span class="ci-price">5,50 €</span></li>
+                <li class="carta-item"><span class="ci-name">Ensalada de aguacate</span><span class="ci-price">7,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="carta-acc-item">
+            <button class="carta-acc-trigger" aria-expanded="false">
+              <span class="acc-label" data-i18n="carta.cat2">Arepas</span>
+              <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="carta-acc-panel">
+              <ul class="carta-items-list">
+                <li class="carta-item"><span class="ci-name">Reina Pepiada</span><span class="ci-price">8,90 €</span></li>
+                <li class="carta-item"><span class="ci-name">Pabellón</span><span class="ci-price">9,50 €</span></li>
+                <li class="carta-item"><span class="ci-name">Pelúa</span><span class="ci-price">9,50 €</span></li>
+                <li class="carta-item"><span class="ci-name">La Serrana (especial)</span><span class="ci-price">10,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="carta-acc-item">
+            <button class="carta-acc-trigger" aria-expanded="false">
+              <span class="acc-label" data-i18n="carta.cat3">Patacones</span>
+              <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="carta-acc-panel">
+              <ul class="carta-items-list">
+                <li class="carta-item"><span class="ci-name">Con pollo mechado</span><span class="ci-price">9,90 €</span></li>
+                <li class="carta-item"><span class="ci-name">Con carne mechada</span><span class="ci-price">9,90 €</span></li>
+                <li class="carta-item"><span class="ci-name">Mixto</span><span class="ci-price">10,90 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="carta-acc-item">
+            <button class="carta-acc-trigger" aria-expanded="false">
+              <span class="acc-label" data-i18n="carta.cat4">Cachapas y Hallacas</span>
+              <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="carta-acc-panel">
+              <ul class="carta-items-list">
+                <li class="carta-item"><span class="ci-name">Cachapa con queso</span><span class="ci-price">7,90 €</span></li>
+                <li class="carta-item"><span class="ci-name">Cachapa con cochino</span><span class="ci-price">9,50 €</span></li>
+                <li class="carta-item"><span class="ci-name">Hallaca tradicional</span><span class="ci-price">8,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="carta-acc-item">
+            <button class="carta-acc-trigger" aria-expanded="false">
+              <span class="acc-label" data-i18n="carta.cat5">Carnes y Parrilla</span>
+              <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="carta-acc-panel">
+              <ul class="carta-items-list">
+                <li class="carta-item"><span class="ci-name">Pollo a la brasa</span><span class="ci-price">12,50 €</span></li>
+                <li class="carta-item"><span class="ci-name">Carne asada con yuca</span><span class="ci-price">14,90 €</span></li>
+                <li class="carta-item"><span class="ci-name">Cerdo frito con tostones</span><span class="ci-price">13,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="carta-footnote" data-i18n="carta.footnote">Pan, IVA y servicio de mesa incluidos · Pregunta por nuestras sugerencias del día</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ REVIEWS ════════════════════════════════ -->
+    <section class="reviews" aria-label="Reseñas">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow" data-i18n="reviews.eyebrow">Lo que dicen nuestros clientes</p>
+          <h2 class="section-title" data-i18n="reviews.title">Reseñas</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card reveal" style="--d:0s">
+            <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="review-text" data-i18n="reviews.r1">
+              "Un sitio que repites seguro. El menú del día es una pasada, todo casero y muy bien presentado. La merluza, exquisita."
+            </blockquote>
+            <footer class="review-author">
+              <strong class="author-name">María G.</strong>
+              <span class="author-origin" data-i18n="reviews.r1.origin">La Vila Joiosa</span>
+            </footer>
+          </article>
+
+          <article class="review-card reveal" style="--d:0.12s">
+            <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="review-text" data-i18n="reviews.r2">
+              "Vinimos desde Benidorm después de una recomendación y no nos defraudó. El arroz con gambas, de los mejores de la zona."
+            </blockquote>
+            <footer class="review-author">
+              <strong class="author-name">Carlos M.</strong>
+              <span class="author-origin">Benidorm</span>
+            </footer>
+          </article>
+
+          <article class="review-card reveal" style="--d:0.24s">
+            <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="review-text" data-i18n="reviews.r3">
+              "Wir waren drei Mal während unseres Urlaubs dort! Ausgezeichnetes Essen, freundliches Personal und sehr faire Preise."
+            </blockquote>
+            <footer class="review-author">
+              <strong class="author-name">Thomas S.</strong>
+              <span class="author-origin" data-i18n="reviews.r3.origin">Alemania</span>
+            </footer>
+          </article>
+        </div>
+
+        <div class="reviews-foot reveal">
+          <p data-i18n="reviews.invite">¿Has venido? Nos encantaría leer tu opinión.</p>
+          <a href="https://maps.google.com/maps?q=Los+Serrano+con+Calor+Latino,+Av.+de+Benidorm+34,+La+Vila+Joiosa"
+             target="_blank" rel="noopener" class="btn btn-primary" data-i18n="reviews.cta">Dejar una reseña en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ CONTACT + MAP ═══════════════════════════ -->
+    <section class="contact" id="contacto" aria-label="Contacto y ubicación">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Cómo llegar</p>
+          <h2 class="section-title" data-i18n="contact.title">Visítanos</h2>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <h3 data-i18n="contact.address">Dirección</h3>
+              <address>
+                Av. de Benidorm, 34<br>
+                03570 La Vila Joiosa<br>
+                Alicante, España
+              </address>
+              <a href="https://maps.google.com/maps?q=Los+Serrano+con+Calor+Latino,+Av.+de+Benidorm+34,+03570+La+Vila+Joiosa"
+                 target="_blank" rel="noopener" class="detail-link" data-i18n="contact.gmaps">Ver en Google Maps →</a>
+            </div>
+
+            <div class="contact-detail">
+              <h3 data-i18n="contact.phone">Teléfono</h3>
+              <a href="tel:+34965895117" class="phone-big">965 895 117</a>
+              <a href="https://wa.me/34965895117?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20Los%20Serrano"
+                 target="_blank" rel="noopener" class="wa-inline">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span data-i18n="contact.waText">Escríbenos por WhatsApp</span>
+              </a>
+            </div>
+
+            <div class="contact-detail">
+              <h3 data-i18n="contact.hours">Horario</h3>
+              <table class="hours-table" aria-label="Horario de apertura">
+                <tbody>
+                  <tr class="hours-row closed">
+                    <td data-i18n="days.mon">Lunes</td>
+                    <td data-i18n="contact.closed">Cerrado</td>
+                  </tr>
+                  <tr class="hours-row">
+                    <td data-i18n="days.tue-sat">Martes – Sábado</td>
+                    <td>10:00 – 23:30</td>
+                  </tr>
+                  <tr class="hours-row">
+                    <td data-i18n="days.sun">Domingo</td>
+                    <td>10:00 – 23:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="contact-ctas">
+            <a href="tel:+34965895117" class="btn btn-primary" data-i18n="contact.callCta">Llamar ahora</a>
+            <a href="https://wa.me/34965895117?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20Los%20Serrano"
+               class="btn btn-wa" target="_blank" rel="noopener" data-i18n="contact.waCta">Reservar por WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <iframe
+            src="https://maps.google.com/maps?q=Los+Serrano+con+Calor+Latino,+Av.+de+Benidorm+34,+03570+La+Vila+Joiosa,+Alicante&hl=es&z=17&output=embed"
+            width="100%" height="100%"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            title="Mapa de ubicación de Los Serrano"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════ FOOTER ═════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-name">Los Serrano</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Cocina Mediterránea Casera</p>
+        <p class="footer-addr">Av. de Benidorm, 34 · La Vila Joiosa, Alicante</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegación pie de página">
+        <a href="#nosotros" data-i18n="nav.story">Nuestra Historia</a>
+        <a href="#especialidades" data-i18n="nav.dishes">Especialidades</a>
+        <a href="#menu" data-i18n="nav.menu">Carta &amp; Menú</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="footer-contact">
+        <a href="tel:+34965895117">965 895 117</a>
+        <a href="https://wa.me/34965895117" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.rights">© 2026 Los Serrano · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════ WHATSAPP FLOAT ══════════════════════════ -->
+  <a class="whatsapp-float"
+     href="https://wa.me/34965895117?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20Los%20Serrano"
+     target="_blank" rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script defer src="main.js?v=20260609"></script>
+</body>
+</html>
