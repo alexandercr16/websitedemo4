@@ -542,6 +542,7 @@
   function initMobileMenu() {
     var ham = $("#hamburger");
     var menu = $("#mobile-menu");
+    var closeBtn = $("#mobile-menu-close");
     if (!ham || !menu) return;
 
     function openMenu() {
@@ -562,6 +563,8 @@
     ham.addEventListener("click", function () {
       ham.classList.contains("is-open") ? closeMenu() : openMenu();
     });
+
+    if (closeBtn) closeBtn.addEventListener("click", closeMenu);
 
     // close on nav link click
     $$(".mobile-nav-link").forEach(function (link) {
